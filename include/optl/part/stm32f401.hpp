@@ -17,15 +17,14 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OPTL_STM32F40X_INCLUDED
-#define OPTL_STM32F40X_INCLUDED
+#ifndef OPTL_STM32F401_INCLUDED
+#define OPTL_STM32F401_INCLUDED
 
 namespace OPTL
 {
 /*****************************************************************************
  * GPIO                                                                      *
  *****************************************************************************/
-
 typedef Pin<GPIOA, 0> PA0;
 typedef Pin<GPIOA, 1> PA1;
 typedef Pin<GPIOA, 2> PA2;
@@ -111,69 +110,8 @@ typedef Pin<GPIOE, 13> PE13;
 typedef Pin<GPIOE, 14> PE14;
 typedef Pin<GPIOE, 15> PE15;
 
-typedef Pin<GPIOF, 0> PF0;
-typedef Pin<GPIOF, 1> PF1;
-typedef Pin<GPIOF, 2> PF2;
-typedef Pin<GPIOF, 3> PF3;
-typedef Pin<GPIOF, 4> PF4;
-typedef Pin<GPIOF, 5> PF5;
-typedef Pin<GPIOF, 6> PF6;
-typedef Pin<GPIOF, 7> PF7;
-typedef Pin<GPIOF, 8> PF8;
-typedef Pin<GPIOF, 9> PF9;
-typedef Pin<GPIOF, 10> PF10;
-typedef Pin<GPIOF, 11> PF11;
-typedef Pin<GPIOF, 12> PF12;
-typedef Pin<GPIOF, 13> PF13;
-typedef Pin<GPIOF, 14> PF14;
-typedef Pin<GPIOF, 15> PF15;
-
-typedef Pin<GPIOG, 0> PG0;
-typedef Pin<GPIOG, 1> PG1;
-typedef Pin<GPIOG, 2> PG2;
-typedef Pin<GPIOG, 3> PG3;
-typedef Pin<GPIOG, 4> PG4;
-typedef Pin<GPIOG, 5> PG5;
-typedef Pin<GPIOG, 6> PG6;
-typedef Pin<GPIOG, 7> PG7;
-typedef Pin<GPIOG, 8> PG8;
-typedef Pin<GPIOG, 9> PG9;
-typedef Pin<GPIOG, 10> PG10;
-typedef Pin<GPIOG, 11> PG11;
-typedef Pin<GPIOG, 12> PG12;
-typedef Pin<GPIOG, 13> PG13;
-typedef Pin<GPIOG, 14> PG14;
-typedef Pin<GPIOG, 15> PG15;
-
 typedef Pin<GPIOH, 0> PH0;
 typedef Pin<GPIOH, 1> PH1;
-typedef Pin<GPIOH, 2> PH2;
-typedef Pin<GPIOH, 3> PH3;
-typedef Pin<GPIOH, 4> PH4;
-typedef Pin<GPIOH, 5> PH5;
-typedef Pin<GPIOH, 6> PH6;
-typedef Pin<GPIOH, 7> PH7;
-typedef Pin<GPIOH, 8> PH8;
-typedef Pin<GPIOH, 9> PH9;
-typedef Pin<GPIOH, 10> PH10;
-typedef Pin<GPIOH, 11> PH11;
-typedef Pin<GPIOH, 12> PH12;
-typedef Pin<GPIOH, 13> PH13;
-typedef Pin<GPIOH, 14> PH14;
-typedef Pin<GPIOH, 15> PH15;
-
-typedef Pin<GPIOI, 0> PI0;
-typedef Pin<GPIOI, 1> PI1;
-typedef Pin<GPIOI, 2> PI2;
-typedef Pin<GPIOI, 3> PI3;
-typedef Pin<GPIOI, 4> PI4;
-typedef Pin<GPIOI, 5> PI5;
-typedef Pin<GPIOI, 6> PI6;
-typedef Pin<GPIOI, 7> PI7;
-typedef Pin<GPIOI, 8> PI8;
-typedef Pin<GPIOI, 9> PI9;
-typedef Pin<GPIOI, 10> PI10;
-typedef Pin<GPIOI, 11> PI11;
 
 /******************************************************************************/
 
@@ -182,16 +120,10 @@ template<> class Clock<GPIOB> : public ClockDef<RCC_GPIOB> {};
 template<> class Clock<GPIOC> : public ClockDef<RCC_GPIOC> {};
 template<> class Clock<GPIOD> : public ClockDef<RCC_GPIOD> {};
 template<> class Clock<GPIOE> : public ClockDef<RCC_GPIOE> {};
-template<> class Clock<GPIOF> : public ClockDef<RCC_GPIOF> {};
-template<> class Clock<GPIOG> : public ClockDef<RCC_GPIOG> {};
 template<> class Clock<GPIOH> : public ClockDef<RCC_GPIOH> {};
-template<> class Clock<GPIOI> : public ClockDef<RCC_GPIOI> {};
 
 template<> class Clock<USART1> : public ClockDef<RCC_USART1> {};
 template<> class Clock<USART2> : public ClockDef<RCC_USART2> {};
-template<> class Clock<USART3> : public ClockDef<RCC_USART3> {};
-template<> class Clock<UART4> : public ClockDef<RCC_UART4> {};
-template<> class Clock<UART5> : public ClockDef<RCC_UART5> {};
 template<> class Clock<USART6> : public ClockDef<RCC_USART6> {};
 
 template<> class Clock<TIM1> : public ClockDef<RCC_TIM1> {};
@@ -199,13 +131,9 @@ template<> class Clock<TIM2> : public ClockDef<RCC_TIM2> {};
 template<> class Clock<TIM3> : public ClockDef<RCC_TIM3> {};
 template<> class Clock<TIM4> : public ClockDef<RCC_TIM4> {};
 template<> class Clock<TIM5> : public ClockDef<RCC_TIM5> {};
-template<> class Clock<TIM8> : public ClockDef<RCC_TIM8> {};
 //template<> class Clock<TIM9> : public ClockDef<RCC_TIM9> {};
 //template<> class Clock<TIM10> : public ClockDef<RCC_TIM10> {};
 //template<> class Clock<TIM11> : public ClockDef<RCC_TIM11> {};
-//template<> class Clock<TIM12> : public ClockDef<RCC_TIM12> {};
-//template<> class Clock<TIM13> : public ClockDef<RCC_TIM13> {};
-//template<> class Clock<TIM14> : public ClockDef<RCC_TIM14> {};
 
 /******************************************************************************/
 
@@ -216,7 +144,6 @@ template<> class PinAf<TIM3> : public PinAfDef<GPIO_AF2> {};
 template<> class PinAf<TIM4> : public PinAfDef<GPIO_AF2> {};
 template<> class PinAf<TIM5> : public PinAfDef<GPIO_AF2> {};
 
-template<> class PinAf<TIM8> : public PinAfDef<GPIO_AF3> {};
 //template<> class PinAf<TIM9> : public PinAfDef<GPIO_AF3> {};
 //template<> class PinAf<TIM10> : public PinAfDef<GPIO_AF3> {};
 //template<> class PinAf<TIM11> : public PinAfDef<GPIO_AF3> {};
@@ -227,22 +154,17 @@ template<> class PinAf<I2C3> : public PinAfDef<GPIO_AF4> {};
 
 template<> class PinAf<SPI1> : public PinAfDef<GPIO_AF5> {};
 template<> class PinAf<SPI2> : public PinAfDef<GPIO_AF5> {};
+template<> class PinAf<SPI4> : public PinAfDef<GPIO_AF5> {};
 
 template<> class PinAf<SPI3> : public PinAfDef<GPIO_AF6> {};
 
 template<> class PinAf<USART1> : public PinAfDef<GPIO_AF7> {};
 template<> class PinAf<USART2> : public PinAfDef<GPIO_AF7> {};
-template<> class PinAf<USART3> : public PinAfDef<GPIO_AF7> {};
-
-template<> class PinAf<UART4> : public PinAfDef<GPIO_AF8> {};
-template<> class PinAf<UART5> : public PinAfDef<GPIO_AF8> {};
 template<> class PinAf<USART6> : public PinAfDef<GPIO_AF8> {};
 
-template<> class PinAf<CAN1> : public PinAfDef<GPIO_AF9> {};
-template<> class PinAf<CAN2> : public PinAfDef<GPIO_AF9> {};
-//template<> class PinAf<TIM12> : public PinAfDef<GPIO_AF9> {};
-//template<> class PinAf<TIM13> : public PinAfDef<GPIO_AF9> {};
-//template<> class PinAf<TIM14> : public PinAfDef<GPIO_AF9> {};
+#if 0
+I2C2 and I2C3 for F401 map to AF9 alternatively !!
+#endif
 
 /******************************************************************************/
 
@@ -257,46 +179,12 @@ template<uint32_t periph, class rxpin, class txpin> class Serial {};
 	template<> class Serial<prt, rx0, tx1> : public HwSerial<prt, rx0, tx1> {}; \
 	template<> class Serial<prt, rx1, tx1> : public HwSerial<prt, rx1, tx1> {}
 
-#define ser3(prt,rx0,tx0,rx1,tx1,rx2,tx2)	\
-	template<> class Serial<prt, rx0, tx0> : public HwSerial<prt, rx0, tx0> {}; \
-	template<> class Serial<prt, rx1, tx0> : public HwSerial<prt, rx1, tx0> {}; \
-	template<> class Serial<prt, rx2, tx0> : public HwSerial<prt, rx2, tx0> {}; \
-	template<> class Serial<prt, rx0, tx1> : public HwSerial<prt, rx0, tx1> {}; \
-	template<> class Serial<prt, rx1, tx1> : public HwSerial<prt, rx1, tx1> {}; \
-	template<> class Serial<prt, rx2, tx1> : public HwSerial<prt, rx2, tx1> {}; \
-	template<> class Serial<prt, rx0, tx2> : public HwSerial<prt, rx0, tx2> {}; \
-	template<> class Serial<prt, rx1, tx2> : public HwSerial<prt, rx1, tx2> {}; \
-	template<> class Serial<prt, rx2, tx2> : public HwSerial<prt, rx2, tx2> {}
-
 
 ser2(USART1, PA10, PA9, PB7, PB6);
 ser2(USART2, PA3, PA2, PD6, PD5);
-ser3(USART3, PB11, PB10, PC11, PC10, PD9, PD8);
-ser2(UART4, PA1, PA0, PC11, PC10);
-ser1(UART5, PD2, PC12);
-ser2(USART6, PC7, PC6, PG9, PG14);
-
-/******************************************************************************/
-
-template<uint32_t periph, class rxpin, class txpin> class Can {};
-
-#define can2(prt,rx0,tx0,rx1,tx1)	\
-	template<> class Can<prt, rx0, tx0> : public HwCan<prt, rx0, tx0> {}; \
-	template<> class Can<prt, rx1, tx0> : public HwCan<prt, rx1, tx0> {}; \
-	template<> class Can<prt, rx0, tx1> : public HwCan<prt, rx0, tx1> {}; \
-	template<> class Can<prt, rx1, tx1> : public HwCan<prt, rx1, tx1> {}
-
-#define can4(prt,rx0,tx0,rx1,tx1,rx2,tx2,rx3,tx3)	\
-	can2(prt,rx0,tx0,rx1,tx1);			\
-	can2(prt,rx2,tx2,rx3,tx3);			\
-	can2(prt,rx0,tx2,rx1,tx3);			\
-	can2(prt,rx2,tx0,rx3,tx1)
-
-
-//can4(CAN1, PA11,PA12,PB8,PB9,PD0,PD1,PI9,PH13);
-//can2(CAN2, PB5,PB6,PB12,PB13);
+ser2(USART6, PA12, PA11, PC7, PC6);
 
 };
 
-#endif /* OPTL_STM32F40X_INCLUDED */
+#endif /* OPTL_STM32F401_INCLUDED */
 

@@ -17,8 +17,8 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OPTL_STM32F40X_INCLUDED
-#define OPTL_STM32F40X_INCLUDED
+#ifndef OPTL_STM32F41X_INCLUDED
+#define OPTL_STM32F41X_INCLUDED
 
 namespace OPTL
 {
@@ -276,6 +276,7 @@ ser2(UART4, PA1, PA0, PC11, PC10);
 ser1(UART5, PD2, PC12);
 ser2(USART6, PC7, PC6, PG9, PG14);
 
+
 /******************************************************************************/
 
 template<uint32_t periph, class rxpin, class txpin> class Can {};
@@ -298,5 +299,5 @@ template<uint32_t periph, class rxpin, class txpin> class Can {};
 
 };
 
-#endif /* OPTL_STM32F40X_INCLUDED */
+#endif /* OPTL_STM32F41X_INCLUDED */
 
